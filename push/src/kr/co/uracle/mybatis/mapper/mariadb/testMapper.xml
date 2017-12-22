@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Test">
+	<resultMap id="result" type="java.util.Map">
+		<result property="id" column="id" />
+		<result property="pw" column="pw" />
+		<result property="name" column="name" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="result">
+		SELECT * FROM TEST
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO TEST (ID, PW, NAME) VALUES (#{id}, #{pw}, #{name})
+	</insert>
+</mapper>

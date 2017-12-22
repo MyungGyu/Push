@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<properties resource="kr/co/uracle/config/config.properties" />
+	
+	<environments default="${mybatis.environment.default}">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${mybatis.datasource.driver}" />
+				<property name="url" value="${mybatis.datasource.url}" />
+				<property name="username" value="${mybatis.datasource.name}" />
+				<property name="password" value="${mybatis.datasource.password}" />
+			</dataSource>
+		</environment>
+		
+		<environment id="real">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${mybatis.datasource.driver}" />
+				<property name="url" value="${mybatis.datasource.url}" />
+				<property name="username" value="${mybatis.datasource.name}" />
+				<property name="password" value="${mybatis.datasource.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="kr/co/uracle/mybatis/mapper/${mybatis.type}/testMapper.xml" />
+	</mappers>
+</configuration>
