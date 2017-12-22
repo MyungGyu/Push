@@ -7,10 +7,9 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import kr.co.uracle.push.dao.AbstractDAO;
-import kr.co.uracle.push.dao.sample.SampleDAO;
+import kr.co.uracle.mybatis.session.SqlSessionManager;
 
-public class TestSampleDAO extends AbstractDAO {
+public class TestSampleDAO extends SqlSessionManager {
 
 	@Test
 	public void testSelectAll() {
