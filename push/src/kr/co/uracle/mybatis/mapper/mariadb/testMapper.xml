@@ -13,6 +13,9 @@
 	</select>
 	
 	<insert id="insert">
-		INSERT INTO TEST (ID, PW, NAME) VALUES (#{id}, #{pw}, #{name})
+		INSERT INTO TEST (ID, PW, NAME) VALUES
+		<foreach item="data" collection="list" separator=",">
+			(#{data.id}, #{data.pw}, #{data.name})
+		</foreach>
 	</insert>
 </mapper>

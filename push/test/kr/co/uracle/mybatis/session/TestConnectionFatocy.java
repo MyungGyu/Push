@@ -1,4 +1,4 @@
-package kr.co.uracle.mybatis.factory;
+package kr.co.uracle.mybatis.session;
 
 import static org.junit.Assert.assertNotNull;
 
